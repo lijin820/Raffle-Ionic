@@ -1,0 +1,20 @@
+{
+    "version": "2.5.3",
+    "name": "com.telerik.afnetworking",
+    "cordova_name": "Telerik AFNetworking Cordova Plugin",
+    "description": "This plugin adds the AFNetworking library for iOS",
+    "license": "MIT",
+    "keywords": [
+        "cordova",
+        "device"
+    ],
+    "platforms": [
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

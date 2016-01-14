@@ -1,0 +1,51 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "com.paypal.cordova.mobilesdk": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "com.telerik.afnetworking": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.vmax.raffle"
+        }
+    },
+    "dependent_plugins": {}
+}

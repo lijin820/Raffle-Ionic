@@ -1,0 +1,94 @@
+<ion-view title="itempreview" can-swipe-back="false">
+    <ion-header-bar align-title="center" class="itempreviewbar bar-assertive">
+        <div class="itempreviewheaderbar">
+            <button class="previewmenubutton" ng-click="doSomething()"></button>
+        </div>
+  
+        <h1 class="title" style="text-align:center;">{{categoryname}}</h1>
+    </ion-header-bar>
+
+  <ion-content class="itempreview-page" scroll="false">
+        <div class="itempreviewphoto">
+            <ion-slide-box active-slide="myActiveSlide">
+                <ion-slide ng-repeat="item in cameraImages">
+                    <img class="slideImage1" ng-src="{{item}}" />
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+
+        <div class="itempreviewdetail">
+            <div class="itempreviewnotdescription">
+                    <div class="descriptiondiv1">
+                            <div class="previewitemname">
+                                <font name="Myriad Pro" size="3" color="black"><b>{{itemname}}</b></font>
+                            </div>
+
+                            <div class="previewproperty">
+                                <font size="2px" color="grey"><b>{{itemkeyword}}</b></font>
+                            </div>
+
+                    </div>
+
+                    <div class="descriptiondiv2">
+                            <div class="previewprice" style="text-align:right">
+                                <font size="3px" color="#ef5843"><b>$ {{priceperslot}}</b></font>
+                            </div>
+
+                            <div class="previewcount" style="text-align:right">
+                                <font size="2px" color="#ef5843">{{numberofslots}} available</font>
+                            </div>
+
+                    </div>
+
+            </div>
+
+            <div class="itempreviewdescription" style="overflow:auto;">
+                <font color="gray" size="2px"> {{itemdescription}}</font>
+            </div>
+
+        </div>
+
+        <div class="itempreviewtimecount">
+            <div class="daypartdiv">
+                <div class="daynumber">
+                    <font size="10px" color="#ef5843"><b>{{hours}}</b></font>
+                </div>
+
+                <div class="daytext">
+                    <font size="2px" color="#ef5843" ><b>Hrs</b></font>
+                </div>
+            </div>
+            <div class="hourpartdiv">
+                <div class="hournumber">
+                    <font size="10px" color="#ef5843" ><b>{{minutes}}</b></font>
+                </div>
+
+                <div class="hourtext">
+                    <font size="2px" color="#ef5843" ><b>Min</b></font>
+                </div>
+            </div>
+            <div class="minpartdiv">
+                <div class="minnumber">
+                    <font size="10px" color="#ef5843" ><b>{{seconds}}</b></font>
+                </div>
+
+                <div class="mintext">
+                    <font size="2px" color="#ef5843" ><b>Sec</b></font>
+                </div>
+            </div>
+        </div>
+
+        <div class="itempreviewbutton" style=" text-align: center;">
+            <button class="btnnext" ng-click="goToPaymentSelect()">
+                NEXT
+            </button>
+
+            <button class="btnedit" ng-click="goToPostItem()">
+                EDIT
+            </button>
+
+        </div>
+
+  </ion-content>
+</ion-view>
+  

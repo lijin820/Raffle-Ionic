@@ -1,0 +1,31 @@
+<ion-view title = "signup" hide-nav-bar="true">
+  <ion-content class="signup-page content-bg">
+        <div class="list">
+        <label class="item item-input username">
+          <input type="text" placeholder="Name" ng-model="data.username">
+        </label>
+
+        <label class="item item-input email">
+          <input type="text" placeholder="Email" ng-model="data.email">
+        </label>
+
+        <label class="item item-input phonenumber">
+          <input type="phonenumber" placeholder="Phone number" ng-model="data.phonenumber">
+        </label>
+
+        <label class="item item-input lock">
+          <input type="password" placeholder="Password" ng-model="data.password">
+        </label>
+
+      </div>
+    
+      <button class="button" ng-click="signup(data)">
+        Sign me up
+      </button>
+      <div class="list1">
+        <button class="button2" ng-click="gotoLogin()">
+          Already a member? Login here
+        </button>
+      </div>
+  </ion-content>
+</ion-view>

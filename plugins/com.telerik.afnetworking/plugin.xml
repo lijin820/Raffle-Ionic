@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="com.telerik.afnetworking"
+	version="2.5.3">
+	<name>Telerik AFNetworking Cordova Plugin</name>
+	<description>This plugin adds the AFNetworking library for iOS</description>
+	<license>MIT</license>
+	<keywords>cordova,device</keywords>
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+	<platform name="ios">
+        <framework src="src/ios/AFNetworking.framework" custom="true"/>
+        <framework src="Foundation.framework" weak="true" />
+        <framework src="CFNetwork.framework" />
+        <framework src="Security.framework" />
+        <framework src="SystemConfiguration.framework" />
+	</platform>
+</plugin>

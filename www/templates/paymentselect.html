@@ -1,0 +1,57 @@
+<ion-view title = "Payment" can-swipe-back="false">
+          <ion-nav-buttons side="right">
+              <button class="addcartbutton" ng-click="AddCart()">
+              </button>
+          </ion-nav-buttons>
+
+  <ion-content class="payment-page transparentenable" scroll="false">
+        <div class="paymentfirstdiv">
+            <div class="paymentdetail1">
+                <div class="paypallabel">
+                  
+                    <button class="btnpaypal" ng-click="selectedPaypal()">
+                        <input type="radio" name="paypal" value="paypal" ng-model="formData.paypalbank">
+                        <img src="img/iconpaypal.png" style="width:80px;margin-right: 35%;">
+                    </button>
+                  
+                </div>
+
+                <div class="mastercardlabel">
+                    <div class="imagediv">
+                        <img class = "image1" src="img/iconmastercard.png" width="100%">
+                    </div>
+
+                    <div class="imagediv">
+                        <img class = "image2" src="img/iconvisa.png" width="100%">
+                    </div>
+
+                    <div class="imagediv">
+                        <img class = "image3" src="img/iconexpress.png" width="100%">
+                    </div>
+
+                    <div class="imagediv">
+                        <img class = "image4" src="img/iconmastercard.png" width="100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="paymentdetail2">
+                <div class="directbanktransfer">
+                    <button class="btnbank" ng-click="selectedPaypal()">
+                      <input type="radio" name="bank" value="bank" ng-model="formData.paypalbank">
+                      <font size="4px" color="gray">Direct bank transfer</font>
+                    </button>
+                </div>
+
+                <div class="directlabel">
+                  <font color="gray" size="2px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</font>
+                </div>
+            </div>
+
+            <button class="btnpostraffle" ng-click="onPostRaffle()">
+                POST RAFFLE
+            </button>
+
+        </div>
+  </ion-content>
+</ion-view>

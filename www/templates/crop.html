@@ -1,0 +1,25 @@
+<ion-view view-title="Crop" name="crop-view">
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="goBack()">
+            <i class="ion-arrow-left-c"></i> Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="cropArea">
+            <img-crop
+                image="capturedImgURI"
+                result-image="imageCropResult"
+                area-type="square"
+                result-image-quality="1"
+                result-image-size="350">
+            </img-crop>
+        </div>
+        <br />
+        <div>
+            <button class="button button-assertive half-width left-button" ng-click="cancelImage()">Cancel</button>
+            <button class="button button-balanced half-width right-button" ng-click="useImage(imageCropResult)">Crop</button>
+        </div>
+        
+        
+    </ion-content>
+</ion-view>

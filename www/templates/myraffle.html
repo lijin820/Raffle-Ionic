@@ -1,0 +1,16 @@
+<ion-view title="fetchcategoryitem" can-swipe-back="false" cache-view = "false">
+    <ion-header-bar align-title="center" class="itempreviewbar bar-assertive">
+        <h1 class="title" style="text-align:center;">My Raffle</h1>
+    </ion-header-bar>
+
+    <ion-content class="padding">
+        <ion-list show-delete="shouldShowDelete" show-reorder="shouldShowReorder" can-swipe="true">
+            <ion-item ng-repeat="object in itemArray | filter:searchForce" class="item-thumbnail-left" ng-click="itemClicked(object)">
+                <img ng-src="http://li1364-120.members.linode.com/Raffle/{{object.image_path}}" />
+                <h2>{{object.itemname}}</h2>
+                <p>{{object.itemdescription}}</p>
+                <p>{{object.submit_date}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>  

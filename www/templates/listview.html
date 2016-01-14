@@ -1,0 +1,29 @@
+<ion-view view-title="Documents" name="login-view" can-swipe-back="false">
+  <ion-nav-buttons side="left">
+      <button class="button" ng-click="goBack()">
+        <i class="ion-arrow-left-c"></i> Logout
+      </button>
+  </ion-nav-buttons>
+  <ion-header-bar class="bar-positive bar-subheader">
+      <input type="text" placeholder="Search" data-ng-model="searchForce" class="searchBox">
+      <button ng-if="searchForce.length"
+              class="searchCancel button button-icon ion-android-close input-button"
+              ng-click="clearSearch()">
+      </button>
+  </ion-header-bar>
+  <ion-content class="padding">
+      <ion-list show-delete="shouldShowDelete" show-reorder="shouldShowReorder" can-swipe="listCanSwipe">
+          <ion-item ng-repeat="item in items | filter:searchForce" class="item-thumbnail-left" ng-click="itemClicked(item)">
+              <img ng-src="{{item.image_path}}" />
+              <h2>{{item.submit_date}}</h2>
+              <p>{{item.description}}</p>
+            </ion-item>
+      </ion-list>
+  </ion-content>
+
+  <ion-footer-bar class="bar-positive">
+    <div class="buttons">
+        <button class="button" ng-click="takePhoto()">Take Photo</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

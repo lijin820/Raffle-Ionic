@@ -1,0 +1,92 @@
+<ion-view can-swipe-back="false">
+  <ion-side-menus>
+      <ion-side-menu-content>
+        <ion-nav-bar class="navigationbackground bar-light transparent-nav " style = "text-align:center">
+          <ion-nav-buttons side="left">
+              <button class="slidemenubutton" ng-click="toggleLeft()">
+              </button>
+          </ion-nav-buttons>
+
+<!--           <ion-nav-buttons side="right">
+              <button class="addpreviewmenubutton" ng-click="toggleLeft()">
+              </button>
+          </ion-nav-buttons>
+ -->
+        </ion-nav-bar>
+
+
+        <ion-nav-view name="menuContent"></ion-nav-view>
+      </ion-side-menu-content>
+
+      <ion-side-menu side="left" >
+        <ion-content class="slidemenu-page content-bg2 home-bg1 " scroll="false">
+            <div class="profilepicture">
+                  <img class="imgprofile" src="http://graph.facebook.com/{{fuser_id}}/picture?width=120&height=120" alt="loading..." width="120" height="120">
+
+                  <div class="spanusername"style="color:white;font-weight:bold">{{username}}</div>
+            </div>
+
+            <div class="bar bar-header item-input-inset">
+                  <label class="item-input-wrapper">
+                     <input type="search" placeholder="Search">
+                  </label>
+            </div>
+          
+            <div class="goareaarray">
+              <div class="gohomebutton">
+                    <button class = "homebutton" ng-click="goHome()">
+                          <img src="img/btnhome.png" alt="Smiley face" width="30" height="25">
+                          <span style="color:gray;vertical-align:super; margin-left: 10px ; font-size:17px">Home</span>
+                    </button>
+              </div>
+
+              <div class="gosellpostbutton">
+                    <button class = "homebutton" ng-click="goSellPost()">
+                          <img src="img/btnsell.png" alt="Smiley face" width="30" height="25">
+                          <span style="color:gray;vertical-align:super; margin-left: 10px; font-size:17px">Sell-Post item</span>
+                    </button>
+              </div>
+
+              <div class="gomyraffle">
+                    <button class = "homebutton" ng-click="goMyraffle()">
+                          <img src="img/btnmyraffle.png" alt="Smiley face" width="25" height="25">
+                          <span style="color:gray;vertical-align:super; margin-left: 15px; font-size:17px">My raffle</span>
+                    </button>
+              </div>
+
+              <div class="golocation">
+                    <button class = "homebutton" ng-click="goLocation()">
+                          <img src="img/btnlocation.png" alt="Smiley face" width="20" height="25">
+                          <span style="color:gray;vertical-align:super; margin-left: 15px; font-size:17px">Location based raffle</span>
+                    </button>
+              </div>
+
+              <div class="gosortby">
+                    <button class = "homebutton" ng-click="goSortby()">
+                          <img src="img/btnsortby.png" alt="Smiley face" width="25" height="25">
+                          <span style="color:gray;vertical-align:super; margin-left: 10px; font-size:17px">Sort by</span>
+                    </button>
+              </div>
+            </div>
+
+            <div class="commonbuttonarray">
+                  <div class="helpbutton">
+                        <button class = "homebutton" ng-click="goHelp()">
+                              <img src="img/btnhelp.png" alt="Smiley face" width="25" height="25">
+                              <span style="color:green;vertical-align:super; margin-left: 10px; font-size:17px">Help</span>
+                        </button>
+                  </div>
+
+                  <div class="logoutbutton">
+                        <button class = "buttonlogout" ng-click="goLogout()">
+                              <img src="img/btnlogout.png" alt="Smiley face" width="25" height="25">
+                              <span style="color:red;vertical-align:super; margin-left: 10px; font-size:17px">Logout</span>
+                        </button>
+                  </div>
+
+            </div>
+        </ion-content>
+      </ion-side-menu>
+    </ion-side-menus>
+
+ </ion-view>

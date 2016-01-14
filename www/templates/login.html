@@ -1,0 +1,44 @@
+<ion-view title = "start" hide-nav-bar="true">
+ <ion-content class="main-login-page content-bg overlay-content" scroll="false" >
+      <div class="list">
+        <label class="item item-input username">
+          <input type="text" placeholder="Username" ng-model="user.username">
+        </label>
+
+        <label class="item item-input lock">
+          <input type="password" placeholder="Password" ng-model="user.password">
+        </label>
+
+        <label class="forgetlabel item-forgetlabel">
+          <button class = "button button-ForgetPasswordButton" ng-click="onForgetPassword()">
+              Forgot password?
+          </button>
+        </label>
+      </div>
+
+      <div class="list1">
+        <label class="item1 ">
+          <button class="button1" ng-click="onLogin(user)">
+            Login
+          </button>
+        </label>
+
+        <label class="item1 ">
+          <button class="button1 " ng-click="fbLogin()">
+            Login with facebook
+          </button>
+        </label>
+
+      </div>
+
+      <div class="list2">
+        <label class="item2 ">
+          <button class="button2" ng-click="gotoSignup()">
+            Still don't have an account? Register here
+          </button>
+        </label>
+      </div>
+
+  </ion-content>
+
+</ion-view>

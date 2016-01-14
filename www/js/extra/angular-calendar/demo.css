@@ -1,0 +1,206 @@
+#demo { padding-top: 50px; }
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.cal-day-box .day-event {
+  width: 80%;
+}
+
+.cal-context {
+  background-color: #FFF;
+}
+
+#content.table-layout > div, #content.table-layout > section {
+  padding-bottom: 0px;
+}
+
+.tray-left, .tray-right {
+  border-bottom: 1px solid #ddd;
+}
+
+.cal-day-outmonth span[data-cal-date] {
+  opacity: 0.5;
+}
+
+.cal-month-day.cal-day-outmonth {
+  background-color: #f7f7f7;
+  color: #777;
+}
+
+.calendar-prev:after {
+  content: "\02039";
+  font-weight: 700;
+}
+
+.calendar-next:after {
+  content: "\0203A";
+  font-weight: 700;
+}
+
+.calendar-btn-group button, .calendar-btn-group label {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0);
+    white-space: nowrap;
+    padding: 9px 12px;
+    font-size: 13px;
+    line-height: 1.49;
+    border-radius: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #666666;
+    background-color: #f0f0f0;
+    border-color: rgba(0, 0, 0, 0.1);
+    height: auto;
+    padding: 6px 12px;
+}
+
+.calendar-icon span {
+  font-size: 2em;
+  line-height: .5em;
+  height: .5em;
+  font-family: "Courier New",Courier,monospace;
+}
+
+.calendar-btn-group label:hover, .btn-primary.active:hover {
+  background-color: #aaa;
+  border-color: #aaa;
+}
+
+.btn-primary.active {
+  background-color: #aaa;
+}
+
+#appointment_details .row {
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#appointment_details .row div:before {
+  margin-top: 50%;
+}
+
+#appointment_details input[type="text"] {
+  height: 40px;
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+}
+
+#appointment_details button.btn {
+  position: relative;
+  top: -1px;
+  left: 5px;
+  border-color: #ccc;
+}
+
+span[data-cal-date] {
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.cal-month-day .cal-events-num {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.cal-row-head [class*="cal-cell"]:first-child, .cal-row-head [class*="cal-cell"] {
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.cal-row-head {
+  border-left: 1px solid #ddd;
+  background-color: #eee;
+}
+
+.cal-row-head:hover {
+  border-left: 1px solid #ddd;
+  background-color: #eee;
+}
+
+.cal-day-outmonth span[data-cal-date] {
+  opacity: 0.5;
+}

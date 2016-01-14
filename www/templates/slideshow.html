@@ -1,0 +1,33 @@
+<ion-view view-title="Single View" name="login-view" can-swipe-back="false" >
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="goBack()">
+            <i class="ion-arrow-left-c"></i> Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <ion-slide-box active-slide="myActiveSlide">
+            <ion-slide ng-repeat="item in items">
+                <div >
+                    <div class="slideDescription">
+                        <h2>{{item.description}}</h2>
+                        <p>
+                        <span class="pre-label">Date :</span>
+                        &nbsp;{{item.submit_date}}
+                        </p>
+                        <p>
+                        <span class="pre-label">Amount :</span>
+                        &nbsp;{{item.amountstr}}
+                        </p>
+                        <p>
+                        <span class="pre-label">Category :</span>
+                        &nbsp;{{item.category_name}}
+                        </p>
+                    </div>
+                    <div class="slideDiv" ng-if="slideVisible($index)" ng-click="showFullScreen(item.image_path)">
+                        <img class="slideImage" ng-src="{{item.image_path}}" />
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>

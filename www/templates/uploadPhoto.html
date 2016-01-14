@@ -1,0 +1,59 @@
+<ion-view view-title="Upload" name="login-view"  can-swipe-back="false">
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="goBack()">
+            <i class="ion-arrow-left-c"></i> Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="list list-inset">
+            <div class="panel">
+                <form name="form" novalidate>
+                    <div class="form-group" style="width:100%; text-align:center;">
+                        <img ng-show="imageURI !== undefined" ng-src="{{imageURI}}" class="form-img" />
+                    </div><br />
+                    <div class="form-group">
+                        <label class="control-label">Date</label>
+                        <div ng-click="showDatePicker()">
+                            <span class="form-control">{{todayDate}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Category</label>
+                        <div>
+                            <select ng-model="data.category" class="form-control">
+                                <option ng-repeat="option in categories" value="{{option.id}}" ng-selected="{{option.order==0}}">
+                                    {{option.name}}
+                                </option>
+                            </select>
+                            <i class="icon ion-ios7-arrow-down"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Amount</label>
+                        <label class="item item-input">
+                            <input type="number" min="0" value="0" ng-model="data.amount" class="form-control" name="amount" required>
+                        </label>
+                        <span ng-show="form.amount.$dirty &amp;&amp; form.amount.$error.required" class="help-block">
+                            Amount is required
+                        </span>
+<!--                        <span ng-show="form.amount.$valid" class="help-block">-->
+<!--                            Amount should be numeric value-->
+<!--                        </span>-->
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Description</label>
+                        <label class="item item-input">
+                            <input type="text" placeholder="" ng-model="data.description" class="form-control" name="description" required>
+                        </label>
+                        <span ng-show="form.description.$dirty &amp;&amp; form.description.$error.required" class="help-block">
+                            Description is required
+                        </span>
+                    </div>
+                    <button class="button button-block button-positive" ng-click="upload(data)">
+                        Upload
+                    </button>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

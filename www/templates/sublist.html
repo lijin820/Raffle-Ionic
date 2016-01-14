@@ -1,0 +1,35 @@
+<ion-view view-title="Invoice" name="login-view" can-swipe-back="false">
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="goBack()">
+            <i class="ion-arrow-left-c"></i> Logout
+        </button>
+    </ion-nav-buttons>
+    <ion-header-bar class="bar-positive bar-subheader">
+        <div class="item item-input searchBox">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="Search" data-ng-model="searchForce" />
+            <button ng-if="searchForce.length" class="button button-icon ion-android-close input-button searchCancel" ng-click="clearSearch()">
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <ion-list show-delete="shouldShowDelete" show-reorder="shouldShowReorder" can-swipe="true">
+            <ion-item ng-repeat="item in items | filter:searchForce" class="item-thumbnail-left" ng-click="itemClicked(item)">
+                <img ng-src="{{item.image_path}}" />
+                <h2>{{item.description}}</h2>
+                <p>Date : {{item.submit_date}}</p>
+                <p>Amount : {{item.amountstr}}</p>
+                <p>Category : {{item.category_name}}</p>
+                <ion-option-button class="button-info button-delete" ng-click="deleteItem(item)">
+                    &nbsp;&nbsp;Delete&nbsp;&nbsp;
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    
+    <ion-footer-bar class="bar-positive">
+        <div class="buttons">
+            <button class="button" ng-click="takePhoto()">Take Photo</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

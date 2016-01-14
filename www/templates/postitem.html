@@ -1,0 +1,77 @@
+<ion-view can-swipe-back="false" cache-view = "false">
+  <ion-content class="postitem-page transparentenable" scroll="false">
+            <div class="diviteminfo">
+                  <div class="itemname">
+                    <input type="itemname" class="itemnameplaceholder" placeholder="Name of the item" ng-model="data.itemname">
+                  </div>
+
+                  <div class="itemdescription">
+                    <input type="itemdescription" class="itemdescriptionplaceholder" placeholder="Item description" ng-model="data.itemdescription">
+                  </div>
+
+                  <div class="itemkeyword">
+                    <input type="itemkeyword" class="itemkeywordplaceholder" placeholder="Item keyword" ng-model="data.itemkeyword">
+                  </div>
+
+                  <div class="raffleduration">
+                    <!-- <input type="raffelduration" class="raffeldurationplaceholder" placeholder="Raffle duration" ng-model="data.raffleduration" > -->
+                    <select ng-model="data.category0" class="custom-option0" >
+                            <option value="" disabled selected><font color="#b2b2b2 !important">Raffle duration</font></option>
+                            <option value="1">1 day</option>
+                            <option value="2">2 days</option>
+                            <option value="3">3 days</option>
+                            <option value="4">4 days</option>
+                            <option value="5">5 days</option>
+                            <option value="6">6 days</option>
+                            <option value="7">7 days</option>
+                        </select>
+                  </div>
+                  
+                  <div class="numberofslots">
+                    <div>
+                        <select ng-model="data.category1" class="custom-option1" >
+                            <option value="" disabled selected><font color="#b2b2b2 !important">Number of slots</font></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                  </div>
+
+                  <div class="priceperslot">
+                    <div>
+                        <select ng-model="data.category2" class="custom-option2" >
+                            <option value="" disabled selected><font color="#b2b2b2">Price per slot</font></option>
+                            <option value="1">1$</option>
+                            <option value="2">2$</option>
+                            <option value="3">3$</option>
+                            <option value="4">4$</option>
+                            <option value="5">5$</option>
+                        </select>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="divitemphotos">
+                  <div class="itemphoto" ng-repeat="image in cameraImages">
+                      <img class="imgprofile" ng-src="{{ image }}" width="50" height="50">
+                  </div>
+
+                  
+            </div>
+
+            <div class="divbuttoncamera">
+                  <button class = "camerabutton" ng-click="onClickCameraButton()">
+                        <img src="img/buttoncamera.png" alt="camera" width="80" height="80">
+                  </button>
+            </div>
+
+            <div class="divbuttonnext">
+                  <button class = "gonextbutton" ng-click="onClickNextButton()">
+                        <font color="white" size="3">NEXT</font>
+                  </button>
+            </div>            
+    </ion-content>
+ </ion-view>
